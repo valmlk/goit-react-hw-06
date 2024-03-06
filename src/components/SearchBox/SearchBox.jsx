@@ -3,10 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
 import css from './SearchBox.module.css';
 
-const SearchBox = ( ) => {
+const SearchBox = () => {
   const id = useId();
   const dispatch = useDispatch();
   const filterState = useSelector(state => state.filter.name);
+
+  console.log('Filter State:', filterState);
 
   return (
     <div className={css.box}>
